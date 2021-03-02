@@ -122,6 +122,29 @@ app-top-bar h1 {
   margin: 0;
 }
 
+/* Side Bar */
+
+app-side-bar {
+  width: 20%;
+  height: 100%;
+  background-color: #1976d2;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+
+app-side-bar h1 {
+  color: white;
+  margin: 0;
+}
+
+app-side-bar h2 {
+  color: white;
+  margin: 50;
+}
+
 /* Checkout Cart, Shipping Prices */
 
 .cart-item, .shipping-item {
