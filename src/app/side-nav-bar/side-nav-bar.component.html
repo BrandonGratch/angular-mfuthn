@@ -1,10 +1,37 @@
 <a [routerLink]="['/']">
-  
+
 
 </a>
 <ul class="tcgs">
-  <li *ngFor="let tcg of tcgs">
-    <h2>{{ tcg.name }}</h2>
+  <!--li *ngFor="let tcg of tcgs" (click)="onSelect(tcg)">
+    <h2>{{ tcg.name }}
+      
+    </h2>
+    <div *ngIf="selectedTCG" [class.selected]="hero === selectedHero">
+
+      <h2>{{selectedTCG.name | uppercase}} Details</h2>
+      <div><span>id: </span>{{selectedTCG.id}}</div>
+      <div>
+        <input id="tcg-name" [(ngModel)]="selectedTCG.name" placeholder="name">
+      </div>
+
+    </div-->
+
+  <li *ngFor="let tcg of tcgs" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
+    <span class="badge">{{tcg.id}}</span> {{tcg.name}}
+  </li>
+
+  <div *ngIf="selectedTCG">
+
+    <h2>{{selectedTCG.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedTCG.id}}</div>
+    <div>
+      <label for="tcg-name">TCG name: </label>
+      <input id="tcg-name" [(ngModel)]="selectedTCG.name" placeholder="name">
+    </div>
+  
+  </div>
+
 </ul>
 
 <!-- 

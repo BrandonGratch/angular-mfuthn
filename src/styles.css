@@ -135,6 +135,17 @@ app-side-bar {
   align-items: left;
 }
 
+app-selected-tcg {
+  width: 20%;
+  height: 100%;
+  background-color: #0c6cd3;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+
 app-side-bar h1 {
   color: white;
   margin: 0;

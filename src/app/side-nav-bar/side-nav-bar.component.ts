@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { tcgs } from '../tcgs';
+import { TCG } from '../tcg/tcg';
 
 @Component({
   selector: 'app-side-bar',
@@ -8,9 +9,15 @@ import { tcgs } from '../tcgs';
 })
 export class SideNavBarComponent {
     tcgs = tcgs;
+    selectedTCG?: TCG;
   
     share() {
       window.alert('The product has been shared!');
+    }
+    
+    onSelect(tcg: TCG) {
+      this.selectedTCG = tcg;
+      console.log(this.selectedTCG.name + "has been selected");
     }
 }
 
