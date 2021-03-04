@@ -1,50 +1,37 @@
 /* HeroesComponent's private CSS styles */
+
 .tcgs {
-    margin: 0 0 2em 0;
+    margin: 0 0 1000% 0;
     list-style-type: none;
     padding: 0;
-    width: 15em;
+    width: 100%;
   }
   .tcgs li {
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
+    padding: 1.2em 1em;
+    height: 1em;
+    font-size: 20px;
+    margin: auto;
+    height: 50%;
   }
   .tcgs li:hover {
-    color: #2c3a41;
-    background-color: #e6e6e6;
-    left: .1em;
+    width: 100%;
+    color: white;
+    background-color: #2e8bdd;
   }
   .tcgs li.selected {
-    background-color: black;
+    background-color: #1f5a8f;
     color: white;
   }
   .tcgs li.selected:hover {
-    background-color: #505050;
+    background-color: #2e8bdd;
     color: white;
   }
   .tcgs li.selected:active {
     background-color: black;
     color: white;
-  }
-  .tcgs .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color:#405061;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
   }
   
   input {

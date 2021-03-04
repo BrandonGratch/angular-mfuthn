@@ -3,34 +3,24 @@
 
 </a>
 <ul class="tcgs">
-  <!--li *ngFor="let tcg of tcgs" (click)="onSelect(tcg)">
-    <h2>{{ tcg.name }}
-      
-    </h2>
-    <div *ngIf="selectedTCG" [class.selected]="hero === selectedHero">
+  <li *ngFor="let tcg of tcgs" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
+    <span>{{tcg.name}}</span> 
+    <div *ngIf="tcg === selectedTCG" >
 
-      <h2>{{selectedTCG.name | uppercase}} Details</h2>
+      <!--h2>{{selectedTCG.name | uppercase}} Details</h2>
       <div><span>id: </span>{{selectedTCG.id}}</div>
       <div>
+        <label for="tcg-name">TCG name: </label>
         <input id="tcg-name" [(ngModel)]="selectedTCG.name" placeholder="name">
-      </div>
+      </div-->
+      <p> Poopoo </p>
+      <p> Peepee </p>
+      <p> Furry Shit </p>
 
-    </div-->
-
-  <li *ngFor="let tcg of tcgs" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
-    <span class="badge">{{tcg.id}}</span> {{tcg.name}}
+    </div>
   </li>
 
-  <div *ngIf="selectedTCG">
 
-    <h2>{{selectedTCG.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedTCG.id}}</div>
-    <div>
-      <label for="tcg-name">TCG name: </label>
-      <input id="tcg-name" [(ngModel)]="selectedTCG.name" placeholder="name">
-    </div>
-  
-  </div>
 
 </ul>
 
