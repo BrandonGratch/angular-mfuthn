@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
+import { SubSideBarComponent } from './side-nav-bar/sub-side-bar/sub-side-bar.component';
 import { TCGComponent } from './tcg/tcg.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   imports: [
@@ -17,14 +19,17 @@ import { TCGComponent } from './tcg/tcg.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      { path: 'product', component: ProductDetailsComponent },
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     SideNavBarComponent,
+    SubSideBarComponent,
     ProductListComponent,
-    TCGComponent
+    TCGComponent,
+    ProductDetailsComponent
   ],
   bootstrap: [
     AppComponent

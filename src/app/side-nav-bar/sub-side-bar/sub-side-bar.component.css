@@ -2,40 +2,44 @@
 
 hr {
   height: 1px;
-  width: 100%
+  width: 100%;
+  padding: 0;
 }
-
-.tcgs {
-    margin: 0 0 1000% 0;
+  .products {
+    margin: 0 0 0 0;
     list-style-type: none;
     padding: 0;
     width: 100%;
   }
-  .tcgs li {
+  .products li {
     cursor: pointer;
     position: relative;
     left: 0;
-    padding: 1em 0em 0em 0em;
+    padding: 1em 0em;
     height: 1em;
     font-size: 20px;
     margin: auto;
     height: 50%;
+    background-color: #173e5f;
+  }  
+  
+  .products li.selected {
+    background-color: #173e5f;
+    color: white;
+    /*padding: 0em 0em;*/
   }
-  .tcgs li:hover {
+  .products li:hover {
     width: 100%;
     color: white;
     background-color: #2e8bdd;
   }
-  .tcgs li.selected {
-    background-color: #1f5a8f;
-    color: white;
-    /*padding: 0em 0em;*/
-  }
-  .tcgs li.selected:hover {
+
+  .products li.selected:hover {
     background-color: #1f5a8f;
     color: white;
   }
-  .tcgs li.selected:active {
+  
+  .products li.selected:active {
     background-color: black;
     color: white;
   }

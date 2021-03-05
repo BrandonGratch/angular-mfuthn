@@ -7,7 +7,7 @@ import { TCG } from '../tcg/tcg';
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-nav-bar.component.html',
-  styleUrls: ['./side-nav-bar.component.css']
+  styleUrls: ['./side-nav-bar.component.css'],
 })
 export class SideNavBarComponent {
     tcgs = tcgs;

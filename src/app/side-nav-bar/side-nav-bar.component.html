@@ -7,17 +7,10 @@
     <span><h1>{{tcg.name}}</h1></span> 
     <hr>
     <div *ngIf="tcg === selectedTCG" >
-
-      <!--h2>{{selectedTCG.name | uppercase}} Details</h2>
-      <div><span>id: </span>{{selectedTCG.id}}</div>
-      <div>
-        <label for="tcg-name">TCG name: </label>
-        <input id="tcg-name" [(ngModel)]="selectedTCG.name" placeholder="name">
-      </div-->
-      <li *ngFor="let product of products" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
+      <!--li *ngFor="let product of products" [class.selected]="true" (click)="onSelect(product)">
         <span><h2>{{product.name}}</h2></span> 
-      </li>
-
+      </li-->
+      <sub-side-bar></sub-side-bar>
     </div>
     <!--mat-divider></mat-divider-->
     
