@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { tcgs } from '../tcgs';
+import { products } from '../products';
 import { TCG } from '../tcg/tcg';
+// import '@angular/material';
 
 @Component({
   selector: 'app-side-bar',
@@ -9,6 +11,7 @@ import { TCG } from '../tcg/tcg';
 })
 export class SideNavBarComponent {
     tcgs = tcgs;
+    products = products;
     selectedTCG?: TCG;
   
     share() {

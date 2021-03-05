@@ -4,7 +4,8 @@
 </a>
 <ul class="tcgs">
   <li *ngFor="let tcg of tcgs" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
-    <span>{{tcg.name}}</span> 
+    <span><h1>{{tcg.name}}</h1></span> 
+    <hr>
     <div *ngIf="tcg === selectedTCG" >
 
       <!--h2>{{selectedTCG.name | uppercase}} Details</h2>
@@ -13,11 +14,13 @@
         <label for="tcg-name">TCG name: </label>
         <input id="tcg-name" [(ngModel)]="selectedTCG.name" placeholder="name">
       </div-->
-      <p> Poopoo </p>
-      <p> Peepee </p>
-      <p> Furry Shit </p>
+      <li *ngFor="let product of products" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
+        <span><h2>{{product.name}}</h2></span> 
+      </li>
 
     </div>
+    <!--mat-divider></mat-divider-->
+    
   </li>
 
 
