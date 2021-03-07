@@ -8,7 +8,7 @@ import { TCGDetailComponent } from './tcg/tcg-details/tcg-detail.component';
 const routes: Routes = [
   //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '', component: TCGComponent },
-  { path: 'TCGs/:shortName', component: TCGDetailComponent },
+  { path: ':shortName', component: TCGDetailComponent },
   { path: 'TCGs', component: TCGComponent }
 ];
 

@@ -35,7 +35,6 @@ import { AppRoutingModule } from './app-routing.module';
     TCGRoutingModule,
     ProductRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent }
       //{ path: 'crisis-center', component: null },
       //{ path: 'heroes', component: null },
     ]),
