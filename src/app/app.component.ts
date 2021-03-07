@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { TCG } from './tcg/tcg';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showFiller = false;
+  events: string[] = [];
+  opened: boolean = true;
+  selectedTCG? : TCG;
+
+  options: FormGroup;
+
+  constructor(fb: FormBuilder) {
+    this.options = fb.group({
+      bottom: 0,
+      fixed: false,
+      top: 0
+    });
+  }
 }
 
 

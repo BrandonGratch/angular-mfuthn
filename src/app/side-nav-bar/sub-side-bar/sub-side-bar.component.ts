@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '../../tcg/product';
+import { Product } from '../../product-list/product';
 import { products } from '../../products';
 
 @Component({

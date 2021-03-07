@@ -1,24 +1,22 @@
 <a [routerLink]="['/']">
+  <ul class="tcgs">
+    <li *ngFor="let tcg of tcgs" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
+      <span>
+        <h1>{{tcg.name}}</h1>
+      </span>
+      <hr>
+      <div *ngIf="tcg === selectedTCG">
+        <sub-side-bar></sub-side-bar>
+      </div>
+
+    </li>
+
+  </ul>
 
 
 </a>
-<ul class="tcgs">
-  <li *ngFor="let tcg of tcgs" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
-    <span><h1>{{tcg.name}}</h1></span> 
-    <hr>
-    <div *ngIf="tcg === selectedTCG" >
-      <!--li *ngFor="let product of products" [class.selected]="true" (click)="onSelect(product)">
-        <span><h2>{{product.name}}</h2></span> 
-      </li-->
-      <sub-side-bar></sub-side-bar>
-    </div>
-    <!--mat-divider></mat-divider-->
-    
-  </li>
 
 
-
-</ul>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

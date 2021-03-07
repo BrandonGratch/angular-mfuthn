@@ -2,7 +2,9 @@
 
 hr {
   height: 1px;
-  width: 100%
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .tcgs {
@@ -15,11 +17,11 @@ hr {
     cursor: pointer;
     position: relative;
     left: 0;
-    padding: 1em 0em 0em 0em;
+    padding: 0.5em 0em 0em 0em;
     height: 1em;
     font-size: 20px;
     margin: auto;
-    height: 50%;
+    height: auto;
   }
   .tcgs li:hover {
     width: 100%;
@@ -29,7 +31,6 @@ hr {
   .tcgs li.selected {
     background-color: #1f5a8f;
     color: white;
-    /*padding: 0em 0em;*/
   }
   .tcgs li.selected:hover {
     background-color: #1f5a8f;

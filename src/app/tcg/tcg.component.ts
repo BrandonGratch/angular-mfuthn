@@ -1,17 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { products } from '../products';
+import { tcgs } from '../tcgs';
+
+import { TCG } from './tcg';
+import { TCGService } from './tcg.service';
+import { MessageService } from '../message/message.service';
+
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tcg',
   templateUrl: './tcg.component.html',
   styleUrls: ['./tcg.component.css']
 })
-export class TCGComponent {
-  products = products;
+export class TCGComponent implements OnInit {
+  selectedTCG?: TCG;
+  tcg: TCG;
+  tcgs: TCG[] = [];
 
-  share() {
-    window.alert('The product has been shared!');
+  constructor(private tcgService: TCGService, private messageService: MessageService) { }
+
+  ngOnInit() {
+    this.getTCGs();
+  }
+
+  onSelect(tcg: TCG): void {
+    this.selectedTCG = tcg;
+    this.messageService.add(`TCGComponent: Selected TCG id=${tcg.shortName}`);
+  }
+
+  getTCGs(): void {
+    this.tcgService.getTCGs()
+        .subscribe(tcgs => this.tcgs = tcgs);
   }
 }
 

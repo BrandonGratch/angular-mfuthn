@@ -1,9 +1,25 @@
 <app-top-bar></app-top-bar>
-<app-side-bar></app-side-bar>
-<nav>
-  <a routerLink="/product" routerLinkActive="active">Product Details</a>
-</nav>
-<router-outlet></router-outlet>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+    (closed)="events.push('close!')">
+    <app-side-bar></app-side-bar>
+  </mat-sidenav>
+
+
+  <mat-sidenav-content>
+    <p>
+      <mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox>
+    </p>
+    <nav>
+      <a routerLink="/product" routerLinkActive="active">Product Details</a>
+    </nav>
+    <app-tcg></app-tcg>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
