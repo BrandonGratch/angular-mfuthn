@@ -15,6 +15,7 @@ import { MessageService } from '../message/message.service';
 export class TCGService {
 
     private tcgUrl = '';  // URL to web api
+    tcg : TCG;
 
     constructor(private messageService: MessageService) { }
 
@@ -25,6 +26,8 @@ export class TCGService {
     }
 
     getTCG(shortName: String): Observable<TCG> {
+        
+
         // TODO: send the message _after_ fetching the hero
         this.messageService.add(`TCGService: fetched tcg shortName=${shortName}`);
         return of(tcgs.find(tcg => tcg.shortName === shortName));

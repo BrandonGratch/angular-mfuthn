@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { sets } from '../sets';
 
 @Component({
   selector: 'app-product-details',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
 
+  items = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.items = sets;
   }
 
 }

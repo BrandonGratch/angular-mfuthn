@@ -5,8 +5,9 @@ import { TCGComponent } from './tcg.component';
 //import { TCGListComponent } from './tcg-list.component';
 //import { TCGDetailsComponent } from './tcg-details.component';
 
+import { ProductDetailsComponent } from '../product-list/product-details/product-details.component';
+
 const productRoutes: Routes = [
-  //{ path: ':shortName', component: TCGComponent }
 ];
 
 @NgModule({

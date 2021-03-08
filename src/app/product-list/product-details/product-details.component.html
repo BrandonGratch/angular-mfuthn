@@ -1,1 +1,17 @@
-<p>product-details works!</p>
+<p>PRODUCT DETAILS AND SHIT</p>
+
+<a [routerLink]="['/']">
+
+
+</a>
+<h2>My Heroes</h2>
+  
+<ul class="card-container">
+  <li *ngFor="let item of items">
+      <div class="card">poopoo</div>
+    <a routerLink="">
+        <span class="badge">{{item.id}}</span> {{item.name}}
+      </a>
+  </li>
+
+</ul>

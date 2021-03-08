@@ -1,19 +1,19 @@
-export const tcgs = [
+export const sets = [
   {
     id: 1,
-    name: 'Magic: The Gathering',
-    shortName: 'MTG'
+    name: 'Kaldheim',
+    shortName: 'KLD',
   },
   {
     id: 2,
-    name: 'Yu-Gi-Oh!',
-    shortName: 'YGO'
+    name: 'Zendikar Rising',
+    shortName: 'ZNR',
   },
   {
     id: 3,
-    name: 'Pokemon',
-    shortName: 'POKE'
-  }
+    name: 'Core Set 2021',
+    shortName: 'M21',
+  },
 ];
 
 

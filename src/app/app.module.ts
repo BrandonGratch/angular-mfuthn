@@ -32,17 +32,17 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    TCGRoutingModule,
+    
     ProductRoutingModule,
     RouterModule.forRoot([
       //{ path: 'crisis-center', component: null },
       //{ path: 'heroes', component: null },
     ]),
     BrowserAnimationsModule,
-
     MatSidenavModule,
     MatCheckboxModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TCGRoutingModule,
   ],
   declarations: [
     AppComponent,

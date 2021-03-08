@@ -1,20 +1,17 @@
-<a [routerLink]="['/']">
+
   <ul class="tcgs">
-    <li *ngFor="let tcg of tcgs" [class.selected]="tcg === selectedTCG" (click)="onSelect(tcg)">
+    <li *ngFor="let tcgi of tcgs" [class.selected]="tcgi === selectedTCG" (click)="onSelect(tcgi)">
       <span>
-        <h1>{{tcg.name}}</h1>
+        <a routerLink = "{{tcgi.shortName}}"><h2>{{tcgi.name}}</h2></a>
       </span>
       <hr>
-      <div *ngIf="tcg === selectedTCG">
-        <sub-side-bar></sub-side-bar>
+      <div *ngIf="tcgi === selectedTCG" >
+        <sub-side-bar [tcg]=selectedTCG></sub-side-bar>
       </div>
 
     </li>
 
   </ul>
-
-
-</a>
 
 
 

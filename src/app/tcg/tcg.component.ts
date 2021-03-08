@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { products } from '../products';
+import { products } from '../product-list/products';
 import { tcgs } from '../tcgs';
 
 import { TCG } from './tcg';

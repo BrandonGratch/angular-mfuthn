@@ -4,7 +4,8 @@
 </a>
 <ul class="products">
   <li *ngFor="let product of products" [class.selected]="product === selectedProduct" (click)="onSelect(product)">
-    <span><h2>{{product.name}}</h2></span>
+    <!--span><a routerLink = "{{tcg.shortName}}/{{product.shortName}}"><h2>{{product.name}}</h2></a></span-->
+    <span><a routerLink = "{{getProdURL(tcg, product)}}"><h2>{{product.name}}</h2></a></span>
   </li>
 
 

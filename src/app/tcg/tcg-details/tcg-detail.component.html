@@ -1,9 +1,13 @@
 <div *ngIf="tcg">
-    <h2>{{tcg.name | uppercase}} Details</h2>
+    <h2>{{tcg.name | uppercase}} Details!!</h2>
     <div><span>id: </span>{{tcg.id}}</div>
     <div>
       <label for="tcg-name">TCG name: </label>
       <input id="tcg-name" [(ngModel)]="tcg.name" placeholder="TCG name"/>
     </div>
+
+    <p>details below</p>
+    <router-outlet></router-outlet>
+
     <button (click)="goBack()">go back</button>
   </div>
