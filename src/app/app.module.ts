@@ -25,6 +25,7 @@ import { TCGComponent } from './tcg/tcg.component';
 import { TCGDetailComponent } from './tcg/tcg-details/tcg-detail.component';
 import { MessagesComponent } from './message/messages.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatCheckboxModule,
     AppRoutingModule,
     TCGRoutingModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
