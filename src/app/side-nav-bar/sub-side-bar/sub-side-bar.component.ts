@@ -5,7 +5,7 @@ import { Product } from '../../product-list/product';
 import { products } from '../../product-list/products';
 
 
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -14,46 +14,40 @@ import { Location } from '@angular/common';
   styleUrls: ['./sub-side-bar.component.css']
 })
 export class SubSideBarComponent {
-    @Input() tcg : TCG;
-    products = products;
-    selectedProduct?: Product;
-  
-    constructor(
-      private route: ActivatedRoute,
-      private tcgService: TCGService,
-      private location: Location
-    ) {}
-  
-    ngOnInit(): void {
-      console.log(this.tcg);
-    }
-  
-    getTCG(): void {
-      const shortName = this.route.snapshot.paramMap.get('shortName');
-      //console.log(this.route);
-      //console.log(shortName);
-      this.tcgService.getTCG(shortName)
-        .subscribe(tcg => this.tcg = tcg);
-    }
-  
+  @Input() tcg: TCG;
+  products = products;
+  selectedProduct?: Product;
 
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private tcgService: TCGService,
+    private location: Location
+  ) {
+    router.events.subscribe((val) => {
+      // console.log(this.tcg);
+    });
+  }
 
-    share() {
-      window.alert('The product has been shared!');
-    }
-    
-    onSelect(product: Product) {
-      this.selectedProduct = product;
-      this.getTCG();
-      console.log(this.selectedProduct.name + " has been selected");
-    }
+  ngOnInit(): void {
+    console.log(this.tcg);
+  }
 
-    getProdURL(tcg : TCG, product : Product) {
-      console.log(product);
-      // TO-DO fix errors etc
-      return (tcg.shortName + "/" + product.shortName);
-    }
-    
+  getTCG(): void {
+    const shortName = this.route.snapshot.paramMap.get('shortName');
+    this.tcgService.getTCG(shortName)
+      .subscribe(tcg => this.tcg ? this.tcg = tcg : "");
+  }
+
+  share() {
+    window.alert('The product has been shared!');
+  }
+
+  onSelect(product: Product) {
+    this.selectedProduct = product;
+    this.getTCG();
+    console.log(this.selectedProduct.name + " has been selected");
+  }
 }
 
 
