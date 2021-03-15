@@ -6,6 +6,7 @@
   <li *ngFor="let product of products" [class.selected]="product === selectedProduct" (click)="onSelect(product)" routerLink = "{{tcg.shortName + '/' + product.shortName}}">
     <!--span><a routerLink = "{{tcg.shortName}}/{{product.shortName}}"><h2>{{product.name}}</h2></a></span-->
     <span><h2>{{product.name}}</h2></span>
+  <hr>
   </li>
 
 

@@ -22,7 +22,7 @@
     padding: .3em 0;
     height: 1.6em;
     border-radius: 4px;
-    display: block;
+    display: inline-block;
     width: 100%;
   }
   
@@ -33,13 +33,13 @@
   
   .items a:active {
     background-color: #525252;
-    color: #fafafa;
+    /*color: #fafafa;*/
   }
   
   .items .badge {
     display: inline-block;
     font-size: small;
-    color: white;
+    /*color: white;*/
     padding: 0.8em 0.7em 0 0.7em;
     background-color:#405061;
     line-height: 1em;
@@ -69,11 +69,11 @@
     border-radius: 4px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 40px;
+    height: 250px;
     width: 200px;
     margin: 0 8px 16px;
     padding: 16px;
-    display: flex;
+    display: block;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -105,7 +105,7 @@
 
   .card.highlight-card {
     background-color: #1976d2;
-    color: white;
+    /*color: white;*/
     font-weight: 600;
     border: none;
     width: auto;
@@ -115,4 +115,17 @@
 
   .card.card.highlight-card span {
     margin-left: 60px;
+  }
+
+
+  img {
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  h2 {
+    color: red;
   }

@@ -26,6 +26,9 @@ import { TCGDetailComponent } from './tcg/tcg-details/tcg-detail.component';
 import { MessagesComponent } from './message/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ItemTableComponent } from './item-table/item-table.component';
+import { MatTableModule } from '@angular/material/table';
+
 
 
 @NgModule({
@@ -42,9 +45,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatCheckboxModule,
+    MatTableModule,
     AppRoutingModule,
     TCGRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
@@ -55,7 +59,8 @@ import { HttpClientModule } from '@angular/common/http';
     TCGComponent,
     TCGDetailComponent,
     ProductDetailsComponent,
-    MessagesComponent
+    MessagesComponent,
+    ItemTableComponent
 
   ],
   bootstrap: [

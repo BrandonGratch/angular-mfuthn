@@ -20,7 +20,7 @@ hr {
     padding: 0.5em 0em 0em 0em;
     height: 1em;
     font-size: 20px;
-    margin: auto;
+    margin: 0;
     height: auto;
   }
   .tcgs li:hover {

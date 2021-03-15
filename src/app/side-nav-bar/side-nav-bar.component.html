@@ -2,7 +2,7 @@
   <ul class="tcgs">
     <li *ngFor="let tcgi of tcgs" [class.selected]="tcgi === selectedTCG" (click)="onSelect(tcgi)">
       <span>
-        <a routerLink = "{{tcgi.shortName}}"><h2>{{tcgi.name}}</h2></a>
+        <a><h2>{{tcgi.name}}</h2></a>
       </span>
       <hr>
       <div *ngIf="tcgi === selectedTCG" >

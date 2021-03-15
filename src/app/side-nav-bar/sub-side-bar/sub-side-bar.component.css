@@ -1,46 +1,41 @@
 /* HeroesComponent's private CSS styles */
-
 hr {
   height: 1px;
   width: 100%;
   padding: 0;
+  margin: 0;
 }
 
-  .products {
-    margin: 0 0 0 0;
+.tcgs {
+    margin: 0 0 1000% 0;
     list-style-type: none;
     padding: 0;
     width: 100%;
   }
-  .products li {
+  .tcgs li {
     cursor: pointer;
     position: relative;
     left: 0;
-    padding: 1em 0em 0.5em 0em;
+    padding: 0.5em 0em 0em 0em;
     height: 1em;
     font-size: 20px;
-    margin: auto;
-    height: 50%;
-    background-color: #173e5f;
-  }  
-  
-  .products li.selected {
-    background-color: #173e5f;
-    color: white;
-    /*padding: 0em 0em;*/
+    margin: 0;
+    height: auto;
   }
-  .products li:hover {
+  .tcgs li:hover {
     width: 100%;
     color: white;
     background-color: #2e8bdd;
   }
-
-  .products li.selected:hover {
+  .tcgs li.selected {
     background-color: #1f5a8f;
     color: white;
   }
-  
-  .products li.selected:active {
+  .tcgs li.selected:hover {
+    background-color: #1f5a8f;
+    color: white;
+  }
+  .tcgs li.selected:active {
     background-color: black;
     color: white;
   }
@@ -49,6 +44,11 @@ hr {
     padding: .5rem;
   }
 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

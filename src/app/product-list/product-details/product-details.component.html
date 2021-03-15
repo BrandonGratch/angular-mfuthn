@@ -5,14 +5,15 @@
 
 </a>
 <h2>My Heroes</h2>
-  
+
 <ul class="card-container">
-  <!--p>{{foo()}}</p-->
-  <li *ngFor="let item of items">
-      <div class="card">poopoo</div>
-    <a routerLink="">
-        <span class="badge">{{item.id}}</span> {{item.name}}
-      </a>
+  <li *ngFor="let item of items" routerLink="">
+    <div class="card">
+      <span class="badge">
+        <img src="{{getImgPath(item)}}" class="img" alt="{{item.name}}">
+      </span> 
+      <h2>{{getProductTitle(item)}}</h2>
+    </div>
   </li>
 
 </ul>
