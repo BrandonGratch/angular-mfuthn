@@ -11,9 +11,9 @@ import { ItemTableComponent } from './item-table/item-table.component';
 const routes: Routes = [
   //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'admin', component: ItemTableComponent },
-  { path: '', component: TCGComponent },
   { path: ':shortName', component: TCGDetailComponent, children: [{ path: ':shortName', component: ProductDetailsComponent}] },
   { path: 'TCGs', component: TCGComponent },
+  { path: '', component: TCGComponent },
   
 ];
 
